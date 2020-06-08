@@ -1,0 +1,483 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Awesome - Portfolio HTML Template: Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	
+	<link rel="stylesheet" href="assets/prettify/prettify.css" type="text/css" media="screen, projection">
+</head>
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Awesome - Portfolio HTML Template&rdquo; Documentation by &ldquo;Smuliii&rdquo; v1.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">Awesome - Portfolio HTML Template</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>Created:</strong> 28.8.2011<br>
+					<strong>By:</strong> Samuli Saarinen<br>
+					<strong>Follow me on: <a href="http://twitter.com/Smuliii">Twitter</a><br>
+					<a href="http://themeforest.net/user/Smuliii/profile" class="follow-2">Themeforest</a></strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/smuliii/">here</a>. You can also follow me on Twitter and Themeforest to keep track of all my theme updates and future themes. Thanks so much! :)</p>
+			</div>
+
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#html-structure">HTML Files &amp; Structure</a>
+				<ol>
+					<li><a href="#basics">Basics</a>
+					<ol>			
+						<li><a href="#header">Header</a></li>
+						<li><a href="#footer">Footer</a></li>
+					</ol>
+					</li>
+					<li><a href="#home">Home</a>
+						<ol>			
+							<li><a href="#projects">Projects</a></li>
+						</ol>
+					</li>
+					<li><a href="#subpages">Subpages</a>
+						<ol>			
+							<li><a href="#contactus">Contact Us</a></li>
+						</ol>
+					</li>
+				</ol>
+			</li>
+			<li><a href="#css">CSS Files &amp; Structure</a></li>
+			<li><a href="#javascript">Javascript Plugins</a></li>
+			<li><a href="#psds">PSDs</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+			<li><a href="#changelog">Changelog</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h2 id="html-structure"><strong>A) HTML Files &amp; Structure</strong> - <a href="#toc">top</a></h2>
+		
+		<h3 id="basics">Basics</h3>
+		
+		<p>All pages have been splitted in to three "main" sections; <code class="prettyprint">#header</code>, <code class="prettyprint">#content</code> and <code class="prettyprint">#footer</code>. Inside each of these divs is wrapper div called <code class="prettyprint">.container</code>, which determine the width of page and also centralize it. So just by adjusting <code>.container</code> width value you can either increase or decrease the width of whole layout.</p>
+	
+	<p>Here is simplified example of page structure:</p>
+	
+<pre class="prettyprint lines">
+&lt;div id="header"&gt;
+
+    &lt;div class="container"&gt;
+	
+        [HEADER_CONTENT_HERE]
+        
+    &lt;/div&gt;&lt;!-- end .container --&gt;
+    
+&lt;/div&gt;&lt;!-- end #header --&gt;
+
+&lt;div class="clear"&gt;&lt;/div&gt;
+
+&lt;div id="content"&gt;
+
+    &lt;div class="container"&gt;
+	
+        [CONTENT_HERE]
+
+    &lt;/div&gt;&lt;!-- end .container --&gt;
+
+&lt;/div&gt;&lt;!-- end #content --&gt;
+
+&lt;div id="footer"&gt;
+
+    &lt;div class="container"&gt;
+	
+        [FOOTER_CONTENT_HERE]
+		
+    &lt;/div&gt;&lt;!-- end .container --&gt;
+    
+&lt;/div&gt;&lt;!-- end #footer --&gt;
+</pre>
+
+		<p>You can also split the content area into <code class="prettyprint">#main</code> and <code class="prettyprint">#sidebar</code>, which quite obviously allow you to use sidebar:</p>
+		
+<pre class="prettyprint lines">
+&lt;div id="content"&gt;
+
+    &lt;div class="container"&gt;
+	
+        &lt;div id="main"&gt;
+	
+            [MAIN_CONTENT_HERE]
+
+        &lt;/div&gt;&lt;!-- end #main --&gt;
+	
+        &lt;div id="sidebar"&gt;
+	
+            [SIDEBAR_CONTENT_HERE]
+
+        &lt;/div&gt;&lt;!-- end #sidebar --&gt;
+
+    &lt;/div&gt;&lt;!-- end .container --&gt;
+
+&lt;/div&gt;&lt;!-- end #content --&gt;
+</pre>
+
+		<hr>
+		
+		<h3 id="header">Basics &raquo; <em>Header</em></h3>
+		
+		<p>Customizing logo is extremely simple because it doesn't use any images! Of course you may need to change font-size and/or margin-top value if your site's name is really long. But as long you stay under 15 characters you don't need to change anything else than just a site name itself.</p>
+		
+		<p>Socials links and navigation are just basic unordered lists. Class <code class="prettyprint">.active</code> hightlights current page and to use submenu just create unordered list inside of top-level list item.</p>
+		
+		<p>Here is a list of all available social icons (just replace list item class with any of these):</p>
+		
+		<ul>
+			<li>delicious</li>
+			<li>digg</li>
+			<li>dribbble-2</li>
+			<li>dribbble</li>
+			<li>dribbble-2</li>
+			<li>dropbox</li>
+			<li>facebook</li>
+			<li>facebook-like</li>
+			<li>google-buzz</li>
+			<li>ichat</li>
+			<li>lastfm</li>
+			<li>mobypicture</li>
+			<li>myspace</li>
+			<li>plixi</li>
+			<li>skype</li>
+			<li>stumbleupon</li>
+			<li>tumblr</li>
+			<li>twitter</li>
+			<li>twitter-2</li>
+			<li>vimeo</li>
+			<li>vimeo-2</li>
+			<li>youtube</li>
+			<li>youtube-2</li>
+		</ul>
+
+		<hr>
+		
+		<h3 id="footer">Basics &raquo; <em>Footer</em></h3>
+		
+		<p>There really isn't anything special in the footer. Just remember you can use some social links class names like in header.</p>
+
+		<hr>
+		
+		<h3 id="home">Home <em>(index.html)</em></h3>
+		
+		<p>Before we start to explore projects grid system let's first check what else you can find from homepage. Homepage is splitted in different sections and every sections has its own header. By default you can only use two different icons but of course you can include you own ones too if you wish:</p>
+	
+<pre class="prettyprint lines">
+&lt;div class="section-title"&gt;
+
+    &lt;h6&gt;&lt;span class="icon pen"&gt;&lt;/span&gt; [MY_TITLE] &lt;/h6&gt;
+
+&lt;/div&gt;&lt;!-- end .section-title --&gt;
+</pre>
+	
+		<p>You will also find carousel from bottom of the page and in fact it can hold any content you need. As long you make sure all content are placed inside of list items, it will allow you to use images, text and even videos.</p>
+
+		<hr>
+		
+		<h3 id="projects">Home &raquo; <em>Projects</em></h3>
+		
+		<p>Now to the part that might be to reason why you bought this theme! This theme doesn't have any separate portfolio page but instead it all happens right in homepage, which is the most effective way to keep all visitors on your site. The projects grid itself it's placed in <code class="prettyprint">.projects-slider-gallery</code> which is wrapped in <code class="prettyprint">#projects-slider</code>.</p>
+	
+		<p>You have five different device to choose from: <code>browser</code>, <code>laptop</code>, <code>monitor</code>, <code>phone</code> and <code>tablet</code>. If you don't need any device, just remove class attribute from span tag (but don't remove whole span tag!). You can also mark any item as new by adding this litte snippet just before anchor tag: <code class="prettyprint">&lt;span class="new"&gt;New&lt;/span&gt;</code>.</p>
+		
+		<p>Example of project:</p>
+		
+<pre class="prettyprint lines">
+&lt;li&gt;
+    &lt;span class="new"&gt;New&lt;/span&gt;	
+    &lt;a data-project="my-project"&gt;
+        &lt;span class="phone"&gt;
+            &lt;img src="img/project-1.jpg" alt="Timy"&gt;
+        &lt;/span&gt;
+        &lt;h6&gt;My Project&lt;/h6&gt;
+    &lt;/a&gt;
+&lt;/li&gt;
+</pre>
+		
+		<p>The important part here is the <code>data-project</code>. As you can see above, anchor's <code>data-project</code> value is <code>my-project</code> and this value need to be exactly same in single project too. If these two doesn't match, it just won't work properly. Remember also that because this is static page, you need to change pagination values by hand.</p>
+		
+		<p>With single project you have all same devices available but you have also one extra; <code>phone-big</code>. All single projects are placed in <code class="prettyprint">#single-project</code>.</p>
+		
+		<p>Simplified version of single project:</p>
+
+<pre class="prettyprint lines">
+&lt;div data-project="my-project"&gt;
+
+    &lt;div class="container"&gt;
+
+        &lt;h2&gt;My Project&lt;/h2&gt;
+
+        &lt;div class="controls"&gt;
+
+            &lt;ul class="pagination"&gt;
+                &lt;li class="prev"&gt;&lt;span class="disabled"&gt;&laquo;&lt;/span&gt;&lt;/li&gt;    
+                &lt;li&gt;&lt;span&gt;1 &lt;em&gt;of&lt;/em&gt; 12&lt;/span&gt;&lt;/li&gt;        
+                &lt;li class="next"&gt;&lt;a href="#"&gt;&raquo;&lt;/a&gt;&lt;/li&gt;                        
+            &lt;/ul&gt;
+
+            &lt;a href="#" class="exit"&gt;X&lt;/a&gt;
+            
+        &lt;/div&gt;&lt;!-- end .controls --&gt;
+            
+        &lt;div class="clear"&gt;&lt;/div&gt;
+
+        &lt;ul class="slider"&gt;
+            &lt;li&gt;&lt;span class="phone"&gt;&lt;img src="img/project-single-1.jpg" alt="Image 1"&gt;&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;span class="phone-big"&gt;&lt;img src="img/project-single-2.jpg" alt="Image 1"&gt;&lt;/span&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+
+        [ANY_OPTIONAL_CONTENT]
+            
+    &lt;/div&gt;&lt;!-- end .container --&gt;
+	
+&lt;/div&gt;&lt;!-- end my-project (single project) --&gt;
+</pre>
+		
+		<p>You can put anything you want in to [ANY_OPTIONAL_CONTENT]; text, images etc. The examples can be seen from source code.</p>
+
+		<hr>
+		
+		<h3 id="subpages">Subpages</h3>
+		
+		<p>Markup for subpage is no different than in homepage but in subpages you can use breadcrumbs. It will be placed between <code class="prettyprint">#header</code> and <code class="prettyprint">#content</code>:</p>
+	
+<pre class="prettyprint lines">
+&lt;div id="breadcrumbs">
+
+    &lt;div class="container"&gt;
+
+        &lt;ul class="breadcrumbs"&gt;
+            &lt;li class="home"&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&amp;rarr;&lt;/li&gt;
+            &lt;li&gt;The Blog&lt;/li&gt;
+        &lt;/ul&gt;
+        
+    &lt;/div&gt;&lt;!-- end .container --&gt;
+    
+&lt;/div&gt;&lt;!-- end #breadcrumbs --&gt;
+</pre>
+		
+		<p>Page header with search form:</p>
+	
+<pre class="prettyprint lines">
+&lt;div class="page-header clearfix"&gt;
+
+    &lt;h1 class="page-title"&gt;Blog&lt;/h1&gt;
+
+    &lt;div id="search-form" class="search"&gt;
+        &lt;input type="text" value="" placeholder="Search the blog" /&gt;
+        &lt;input type="submit" value="Go" /&gt;
+    &lt;/div&gt;&lt;!-- end #search-form --&gt;
+			
+&lt;/div&gt;&lt;!-- end .page-header --&gt;
+</pre>
+
+		<hr>
+		
+		<h3 id="contactus">Subpages &raquo; <em>Contact Us (contact.html)</em></h3>
+		
+		<p>Contact form configuration is really simple task. All you need to do is to open <strong>php/config.php</strong> file and change <code class="prettyprint">$your_email</code> value to your own one and that's it!</p>
+	
+<pre class="prettyprint lines">
+&lt;?php
+
+// Email address where all messages are sent
+$your_email = 'thisismy@emailaddress.com'; // Replace this with your own email address
+</pre>
+
+		<hr>
+		
+		<h2 id="css"><strong>B) CSS Files &amp; Structure</strong> - <a href="#toc">top</a></h2>
+		
+		<p>All css files are placed in css directory:</p>
+		
+		<ul>
+			<li><strong>reset.css</strong></li>
+			<li><strong>style.css</strong></li>
+			<li><strong>ie.css</strong></li>
+			<li><strong>fancybox.css</strong></li>
+		</ul>
+		
+		<p>Here is simple list where you can find every section with ease:</p>
+		
+<pre class="lines">
+Basic Elements - Line 1
+
+Generic Classes - Line 58
+
+Lists - Line 82
+
+Alert Boxes - Line 140
+
+Misc Classes/Elements - Line 177
+
+Forms Styles - Line 227
+
+Header - Line 274
+
+Breadcrumbs - Line 430
+
+Content - Line 459
+
+Layouts - Line 492
+
+Main - Line 514
+	
+	Projects - Line 558
+	
+	Services - Line 858
+	
+	Contact Us - Line 880
+	
+	Blog - Line 894
+	
+	Comments - Line 956
+	
+	Blog Posts Carousel - Line 1031
+	
+	Pagination - Line 1089
+	
+	Search - Line 1135
+	
+	Accordion Content - Line 1198
+	
+	Content Tabs - Line 1277
+	
+Sidebar - Line 1337
+
+Footer - Line 1390
+</pre>
+	
+		<hr>
+		
+		<h2 id="javascript"><strong>C) JavaScript</strong> - <a href="#toc">top</a></h2>
+		
+		<p>All Javascript files are placed in js directory:</p>
+
+		<ol>
+			<li><strong>custom.js</strong> - <em>All Javascript settings &amp; custom scripts</em></li>
+			<li><strong>jquery.gridnav.js</strong> - <em>Portfolio items rotator</em></li>
+			<li><strong>jquery.cycle.all.js</strong> - <em>A slideshow plugin that supports many different types of transition effects</em></li>
+			<li><strong>jquery.jcarousel.min.js</strong> - <em>A jQuery plugin for controlling a list of items in horizontal or vertical order</em></li>
+			<li><strong>jquery.fancybox-1.3.4.pack.js</strong> - <em>Fancy lightbox alternative</em></li>
+			<li><strong>jquery.easing.1.3.js</strong> - <em>More transition effects</em></li>
+			<li><strong>gmap3.min.js</strong> - <em>A jQuery plugin to use google maps version 3</em></li>
+			<li><strong>IE9.js</strong> - <em>A JavaScript library to make Microsoft Internet Explorer behave like a standards-compliant browser</em></li>
+			<li><strong>selectivizr-min.js</strong> - <em>CSS3 pseudo-class and attribute selectors for IE 6-8</em></li>
+		</ol>
+		
+		<p>All used JavaScript scripts can be found from bottom of every page:</p>
+<pre class="prettyprint lines">
+&lt;!-- start JS Scripts --&gt;
+&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;window.jQuery || document.write('&lt;script src="js/jquery-1.6.2.min.js"&gt;&lt;\/script&gt;')&lt;/script&gt;
+&lt;!--[if lt IE 9]&gt;
+&lt;script src="js/IE9.js"&gt;&lt;/script&gt;
+&lt;script src="js/selectivizr-min.js"&gt;&lt;/script&gt;
+&lt;![endif]--&gt;
+&lt;script src="http://maps.google.com/maps/api/js?sensor=false"&gt;&lt;/script&gt;
+&lt;script src="js/jquery.gridnav.js"&gt;&lt;/script&gt;
+&lt;script src="js/jquery.cycle.all.js"&gt;&lt;/script&gt;
+&lt;script src="js/jquery.jcarousel.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/jquery.fancybox-1.3.4.pack.js"&gt;&lt;/script&gt;
+&lt;script src="js/jquery.easing.1.3.js"&gt;&lt;/script&gt;
+&lt;script src="js/gmap3.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/custom.js"&gt;&lt;/script&gt;
+&lt;!-- end JS Scripts --&gt;
+</pre>
+		
+		<hr>
+
+		<h2 id="psds"><strong>F) PSDs</strong> - <a href="#toc">top</a></h2>
+
+		<ol>
+			<li><strong>Home</strong> <em>(homepage_main.psd)</em></li>
+			<li><strong>Home with hover effects</strong> <em>(homepage_hovers.psd)</em></li>
+			<li><strong>Home - Single Project</strong> <em>(homepage_project_details.psd)</em></li>
+			<li><strong>Blog</strong> <em>(blog.psd)</em></li>
+			<li><strong>Single Blog Post</strong> <em>(blog_post_details.psd)</em></li>
+			<li><strong>Features</strong> <em>(full_width.psd)</em></li>
+			<li><strong>Services</strong> <em>(services.psd)</em></li>
+			<li><strong>Testimonials</strong> <em>(testimonials.psd)</em></li>
+			<li><strong>Contact Us</strong> <em>(contact_us.psd)</em></li>
+		</ol>
+		
+		<hr>
+
+		<h2 id="credits"><strong>G) Source and Credits</strong> - <a href="#toc">top</a></h2>
+				
+		<p>People and their links who I wanna thank to.</p>
+		
+		<ol>
+			
+			<li><strong>jQuery Plugins/Scripts</strong></li>
+			
+			<ul>
+				<li><a href="http://tympanus.net/codrops/2011/06/09/grid-navigation-effects/">Grid Navigation Effects with jQuery</a> - <i>by Mary Lou</i></li>
+				<li><a href="http://www.malsup.com/jquery/cycle/">jQuery Cycle Plugin</a> - <i>by Mike Alsup</i></li>
+				<li><a href="http://sorgalla.com/projects/jcarousel/">jCarousel</a> - <i>by jcarousel</i></li>
+				<li><a href="http://fancybox.net/">Fancybox</a> - <i>by Janis Skarnelis</i></li>
+				<li><a href="http://gsgd.co.uk/sandbox/jquery/easing/">jQuery Easing Plugin</a> - <i>by George McGinley Smith</i></li>
+				<li><a href="http://gmap3.net/">GMAP3 Plugin for JQuery</a> - <i>by Jean-Baptiste Demonte</i></li>
+				<li><a href="http://code.google.com/p/ie7-js/">ie7-js</a> - <i>by Dean Edwards</i></li>
+				<li><a href="http://selectivizr.com/">selectivizr</a> - <i>by Keith Clark</i></li>
+				<li><a href="http://webdesignerwall.com/tutorials/html5-grayscale-image-hover">HTML5 Grayscale Image Hover</a> - <i>by Darcy Clarke.</i></li>
+				<li><a href="http://www.hagenburger.net/BLOG/HTML5-Input-Placeholder-Fix-With-jQuery.html">HTML5 Placeholder Input Fields Fixed with jQuery</a> - <i>by Nico Hagenburger</i></li>
+			</ul>
+			
+			<li><strong>PHP Scripts</strong></li>
+			
+			<ul>
+				<li><a href="http://dev-tips.com/featured/ajax-and-php-contact-form">Contact Form</a> - <i>by Drew Douglass</i></li>
+			</ul>
+			
+			<li><strong>Icons</strong></li>
+			
+			<ul>
+				<li><a href="http://www.yummygum.nl/portfolio">Social Icons</a> - <i>by Yummygum</i></li>
+			</ul>
+				
+		</ol>
+		
+		<hr>
+		
+		<h2 id="changelog"><strong>H) Changelog</strong> - <a href="#toc">top</a></h2>
+
+		<h4><strong>v1.0 - Initial version</strong></h4>
+		
+		<hr>	
+		
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>Samuli Saarinen</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+
+	<script type="text/javascript" src="assets/prettify/prettify.js"></script>
+	<script> prettyPrint(); </script>
+	
+</body>
+</html>

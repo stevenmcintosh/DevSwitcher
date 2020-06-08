@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Contact - DevSwticher</title>
+
+	<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" />
+	
+	<!--[if ! lte IE 6]><!-->
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+	<!--<![endif]-->
+
+	<!--[if gt IE 6]>
+	<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" />
+	<![endif]-->
+
+	<!--[if lte IE 6]>
+	<link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection">
+	<![endif]-->
+
+	<link rel="stylesheet" href="css/fancybox.css" type="text/css" media="screen" />
+
+	<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic|Open+Sans:300,400,400italic,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<div id="header">
+
+	<div class="container">
+
+		<a href="index.html" id="logo">DevSwitcher</a>
+
+		<ul class="social-links">
+			<li class="twitter"><a href="http://www.twitter.com/flashmcintosh">Twitter</a></li>
+		</ul>
+
+		<ul id="nav">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="speed.html">Speed</a></li>
+			<li><a href="screenshots.html">Screenshots</a></li>
+			<!--li><a href="testimonials.html">Testimonials</a></li-->
+			
+			<li><a href="download.html">Download</a></li>
+			<li class="active"><a href="contact.html">Contact</a></li>
+		</ul>
+		
+	</div><!-- end .container -->
+	
+</div><!-- end #header -->
+
+<div class="clear"></div>
+
+<div id="breadcrumbs">
+
+	<div class="container">
+
+		<ul class="breadcrumbs">
+			<li class="home"><a href="index.html">Home</a></li>
+			<li>&rarr;</li>
+			<li>Contact Us</li>
+		</ul>
+			
+	</div><!-- end .container -->
+	
+</div><!-- end #breadcrumbs -->
+
+<div id="content">
+
+	<div class="container">
+
+		<div class="page-header clearfix">
+
+			<h1 class="page-title-full">I want your feedback, ideas and love!</h1>
+
+			<!-- div id="search-form" class="search">
+				<input type="text" value="" placeholder="Search the blog" />
+				<input type="submit" value="Go" />
+			</div--><!-- end #search-form -->
+						
+		</div><!-- end .page-header -->
+
+		<div class="one-third">
+
+			<h4>Contact Steve</h4>
+
+			<p>I built this Firefox extension to help me work faster and more efficiently.
+			It's amazing the difference it has made. I've now added an options panel so that all PokerStars staff can take advantage.
+			I'm continually working to improve DevSwticher and if you have any ideas, suggestions or feedback, I'd love to hear it.</p>
+
+			<h5>PokerStars staff can catch me at:</h5>
+			
+			<ul class="none">
+				<li class="phone">Ex 2893</li>
+				<li class="pandion">steven mcintosh</li>
+				<li class="email"><a href="mailto:steven@stevenmcintosh.co.uk">steven@stevenmcintosh.co.uk</a> (private email)</li>
+				<li class="address">
+					Steven McIntosh<br />
+					PokerStars Web Team <br />
+					Isle of Man Office<br />
+				</li>
+				<li class="walk">or just walk to my desk :-)</li>
+			</ul>
+			
+		</div><!-- end .one-third -->
+
+		<div class="two-third last">
+
+			<h4>It really couldn't be easier...</h4>
+
+			<form action="php/contact-send.php" method="post" id="contact-form" class="form">
+				
+				<p class="input-block">
+					<label for="form-name">Name*</label>
+					<input type="text" value="" name="name" id="form-name" />
+				</p>
+				
+				<p class="input-block">
+					<label for="form-email">Email*</label>
+					<input type="text" value="" name="email" id="form-email" />
+				</p>
+				
+				<p class="textarea-block">
+					<label for="form-message">Comment*</label>
+					<textarea name="message" id="form-message" cols="70" rows="10"></textarea>
+				</p>
+
+				<div class="clear"></div>
+
+				<input type="submit" name="submit" value="Send" id="form-submit">
+			
+				<div class='hide'>
+					<label for='spam-check'>Do not fill out this field</label>
+					<input name='spam-check' type='text' value='' id="spam-check" />
+				</div>
+
+			</form>
+			
+		</div><!-- end .two-third -->
+
+		<h4>The birth place of DevSwticher</h4>
+	
+		<div id="contact-map"><p>Map failed!</p></div>
+
+	</div><!-- end .container -->
+
+</div><!-- end #content -->
+
+<div id="footer">
+
+	<div class="container">
+
+<p class="align-left"><a href="disclaimer.html" title="Short and sweet">Disclaimer</a>. &copy; 2011, DevSwitcher. All rights reserved. Developed by <a href="mailto:steven@stevenmcintosh.co.uk">Steven McIntosh</a>, PokerStars, WebTeam.</p>
+
+		<ul class="social-links align-right">
+			<li class="twitter"><a href="http://www.twitter.com/flashmcintosh">Twitter</a></li>
+		</ul>
+		
+	</div><!-- end .container -->
+	
+</div><!-- end #footer -->
+
+<!-- start JS Scripts -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.6.2.min.js"><\/script>')</script>
+<!--[if lt IE 9]>
+<script src="js/IE9.js"></script>
+<script src="js/selectivizr-min.js"></script>
+<![endif]-->
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="js/jquery.gridnav.js"></script>
+<script src="js/jquery.cycle.all.js"></script>
+<script src="js/jquery.jcarousel.min.js"></script>
+<script src="js/jquery.fancybox-1.3.4.pack.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/gmap3.min.js"></script>
+<script src="js/custom.js"></script>
+<!-- end JS Scripts -->
+</body>
+</html>
